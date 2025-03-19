@@ -36,12 +36,12 @@ export default function CatDogClassifier() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white p-6">
-      <div className="bg-white p-8 rounded-xl shadow-lg text-center w-96 text-black">
-        <h1 className="text-3xl font-extrabold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      <div className="p-8 text-center text-black bg-white shadow-lg rounded-xl w-96">
+        <h1 className="mb-4 text-3xl font-extrabold text-transparent bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text">
           Cat vs Dog Classifier 🐱🐶
         </h1>
-        <label className="cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">
+        <label className="flex items-center justify-center gap-2 px-4 py-2 font-semibold text-gray-700 bg-gray-200 rounded-lg cursor-pointer hover:bg-gray-300">
           <Upload className="w-5 h-5" />
           Choose File
           <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
@@ -51,7 +51,7 @@ export default function CatDogClassifier() {
         )}
         <button
           onClick={handleUpload}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-700 transition duration-300"
+          className="px-4 py-2 mt-4 text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-700"
           disabled={loading}
         >
           {loading ? "Processing..." : "Upload & Predict"}
