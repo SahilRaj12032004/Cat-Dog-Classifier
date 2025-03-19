@@ -60,5 +60,6 @@ def predict():
         print("Prediction error:", e)
         return jsonify({"error": "Error in prediction"}), 500
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+# Gunicorn will run this
+def handler(event, context):
+    return app
